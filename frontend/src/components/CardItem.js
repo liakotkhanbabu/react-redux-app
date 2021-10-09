@@ -4,6 +4,7 @@ import Moment from "react-moment"
 
 function CardItem({ item }) {
    const rocketType = "rocket_type"
+   const rocketName = "rocket_name"
    return (
       <Card className="m-3" text="dark">
          {item.launch_success === true ? (
@@ -14,18 +15,18 @@ function CardItem({ item }) {
                <Card.Body>
                   <div className="row">
                      <div className="col-md-6">
-                        <p>Flight Number : {item.flight_number}</p>
+                        <p>Rocket Name: {item.rocket[rocketName]}</p>
                      </div>
                      <div className="col-md-6">
-                        <p>Rocket Type : {item.rocket[rocketType]}</p>
+                        <p>Rocket Type: {item.rocket[rocketType]}</p>
                      </div>
                   </div>
                   <div className="row">
                      <div className="col-md-6">
                         <p>
-                           Date :{" "}
-                           <Moment format="MMMM d, YYYY">
-                              {item.launch_date_utc}
+                           Date:{" "}
+                           <Moment format="YYYY-MM-DD">
+                              {item.launch_date_local}
                            </Moment>
                         </p>
                      </div>
@@ -46,18 +47,18 @@ function CardItem({ item }) {
                <Card.Body>
                   <div className="row">
                      <div className="col-md-6">
-                        <p>Flight Number : {item.flight_number}</p>
+                        <p>Rocket Name: {item.rocket[rocketName]}</p>
                      </div>
                      <div className="col-md-6">
-                        <p>Rocket Type : {item.rocket[rocketType]}</p>
+                        <p>Rocket Type: {item.rocket[rocketType]}</p>
                      </div>
                   </div>
                   <div className="row">
                      <div className="col-md-6">
                         <p>
-                           Date :{" "}
-                           <Moment format="MMMM d, YYYY">
-                              {item.launch_date_utc}
+                           Date:{" "}
+                           <Moment format="YYYY-MM-DD">
+                              {item.launch_date_local}
                            </Moment>
                         </p>
                      </div>
